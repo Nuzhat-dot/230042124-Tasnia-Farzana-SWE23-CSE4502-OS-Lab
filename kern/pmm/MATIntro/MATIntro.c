@@ -64,6 +64,7 @@ void set_nps(unsigned int nps)
 unsigned int at_is_norm(unsigned int page_index)
 {
     // TODO [Lab 1]
+    return AT[page_index].perm>1;
     return 0;
 }
 
@@ -75,6 +76,9 @@ unsigned int at_is_norm(unsigned int page_index)
 void at_set_perm(unsigned int page_index, unsigned int perm)
 {
     // TODO [Lab 1]
+    AT[page_index].perm=perm;
+    AT[page_index].allocated=0;
+
 }
 
 /**
@@ -84,6 +88,7 @@ void at_set_perm(unsigned int page_index, unsigned int perm)
 unsigned int at_is_allocated(unsigned int page_index)
 {
     // TODO [Lab 1]
+    return AT[page_index].allocated>0;
     return 0;
 }
 
@@ -94,4 +99,5 @@ unsigned int at_is_allocated(unsigned int page_index)
 void at_set_allocated(unsigned int page_index, unsigned int allocated)
 {
     // TODO [Lab 1]
+    AT[page_index].allocated=allocated;
 }
