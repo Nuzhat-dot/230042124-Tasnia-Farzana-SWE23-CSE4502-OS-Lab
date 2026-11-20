@@ -125,6 +125,4 @@ make LAB=2 && make qemu-nox  # boot the kernel in the terminal
 To exit QEMU, press **Ctrl-a**, then **x**.
 
 To debug, run `make qemu-nox-gdb` in one terminal and `make gdb` in a second
-one. QEMU waits for GDB on a TCP port based on your user ID
-(`id -u % 5000 + 25000`), so several users on one machine do not clash. The
-generated `.gdbinit` connects GDB to that port.
+one.
